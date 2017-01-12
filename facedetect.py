@@ -28,10 +28,11 @@ if __name__ == '__main__':
 	except: video_src = 0
 	args = dict(args)
 	cascade_fn = args.get('--cascade', "xml.xml")
+	#cascade_fn = args.get('--cascade', "/home/rechie/opencv-2.4.13/data/haarcascades/haarcascade_frontalface_alt2.xml")
 	#cascade_fn = args.get('--cascade', "/home/rechie/opencv-2.4.13/data/haarcascades/haarcascade_frontalface_alt.xml")	
 	cascade = cv2.CascadeClassifier(cascade_fn)
 
-	cam = cv2.VideoCapture("/home/rechie/Videos/4.avi")
+	cam = cv2.VideoCapture("/home/rechie/gao/Videos/4.avi")
 
 	while True:
 		ret, img = cam.read()
